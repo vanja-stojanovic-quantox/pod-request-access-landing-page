@@ -6,6 +6,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="assets/js/script.js"></script>
     </head>
     <body>
         <section class="section">
@@ -24,11 +26,22 @@
                             <img class="pocket-casts" src="assets/desktop/pocket-casts.svg">
                         </div>
                     </div>
+                    <div class="container-buttons">
+                        <input id="email-address" class="input-email" type="text" placeholder="Email address">
+                        <button id="access-button" class="button-access">Request Access</button>
+                        <p id="error-empty" class="error-message-empty">Oops! Please add your email</p>
+                        <p id="error-invalid-format" class="error-message-not-formatted">Oops! Please check your email</p>
+                    </div>
                     <div class="container-bottom">
-                        <input class="input-email" type="text" placeholder="Email address">
-                        <button class="button-access">Request Access</button>
+                        <img class="spotify" src="assets/desktop/spotify.svg">
+                        <img class="apple-podcast" src="assets/desktop/apple-podcast.svg">
+                        <img class="google-podcasts" src="assets/desktop/google-podcasts.svg">
+                        <img class="pocket-casts" src="assets/desktop/pocket-casts.svg">
                     </div>
                 </div>
+            </div>
+            <div class="image-bottom">
+                <img class="pattern" src="assets/desktop/bg-pattern-dots.svg">
             </div>
         </section> 
     </body>
