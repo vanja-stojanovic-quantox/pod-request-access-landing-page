@@ -1,21 +1,22 @@
-$(document).ready(function () {
-    $("#access-button").click(function () {
-        var emailAddress = $("#email-address").val();
-        $(this).removeClass("mobile-button");
-
-        $("#error-empty").hide();
-        $("#error-invalid-format").hide();
-
-        if (emailAddress === "") {
-            $(this).addClass("mobile-button");
-            $("#error-empty").show();
+window.onload = function() {
+    document.getElementById('access-button').addEventListener('click', function () {
+        var emailAddress = document.getElementById('email-address').value;
+        var button = document.getElementById('access-button');
+        button.classList.remove('mobile-button');
+    
+        document.getElementById('error-empty').style.display = 'none';
+        document.getElementById('error-invalid-format').style.display = 'none';
+    
+        if (emailAddress === '') {
+            button.classList.add('mobile-button');
+            document.getElementById('error-empty').style.display = 'block';  
         }
         else if (!validateEmail(emailAddress)) {
-            $(this).addClass("mobile-button");
-            $("#error-invalid-format").show();
+            button.classList.add('mobile-button');
+            document.getElementById('error-invalid-format').style.display = 'block';
         }
     });
-});
+};
 
 function validateEmail(email) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

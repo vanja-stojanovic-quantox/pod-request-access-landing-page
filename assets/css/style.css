@@ -21,6 +21,8 @@ body {
     background-image: url("../desktop/image-host.jpg");
     background-size: 888px 640px;
     background-position: right;
+    height: 100%;
+    overflow: hidden;
   }
 }
 body .section {
@@ -39,6 +41,10 @@ body .section {
 @media only screen and (min-device-width: 1440px) {
   body .section {
     display: block;
+    /*@media only screen and (max-device-height: 850px) {
+        overflow-y: auto;
+        height: 100%;
+    }*/
   }
 }
 body .section .all-content {
@@ -358,7 +364,7 @@ body .section .all-content .container .container-bottom {
     max-width: 536px;
     width: 100%;
     margin: 0;
-    padding-top: 64px;
+    margin-top: 64px;
     display: flex;
     text-align: left;
   }
@@ -396,17 +402,18 @@ body .section .image-bottom {
     display: block;
     width: 232px;
     height: 104px;
-    padding-top: 140px;
     padding-left: 30px;
+    margin-top: 140px;
   }
 }
 @media only screen and (min-device-width: 1440px) {
   body .section .image-bottom {
     width: 100%;
     text-align: right;
+    margin-top: 0;
   }
   body .section .image-bottom .pattern {
-    margin-top: -210px;
+    top: -70px;
     position: relative;
   }
 }
