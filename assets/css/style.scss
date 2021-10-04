@@ -1,0 +1,443 @@
+$fontStack: 'Chivo', sans-serif;
+$backgroundColorTransparent: rgb(18, 23, 37, 0.9);
+$backgroundColorTransparentTablet: rgb(18, 23, 37, 0);
+$colorGreen: #54e6af;
+$colorActiveGreen: #b3ffe2;
+$colorWhite: #ffffff;
+$colorText: #c2cbe5;
+$colorInput: #2c344b;
+$colorDark: #121725;
+$colorRed: #fb3e3e;
+
+body {
+    font-family: $fontStack;
+    font-style: normal;
+    font-weight: 300;
+    margin: 0;
+    background-color: $colorDark;
+    background-size: cover;
+    background-image: url('../mobile/image-host.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media only screen and (min-device-width: 768px) {
+        background-image: url('../tablet/image-host.jpg');
+        background-size: 491px 767px;
+        background-position: right top;
+    }
+
+    @media only screen and (min-device-width: 1440px) {
+        background-image: url('../desktop/image-host.jpg');
+        background-size: 888px 640px;
+        background-position: right;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .section {
+        height: 100%;
+        width: 100%;
+        background-color: $backgroundColorTransparent;
+        display: flex;
+
+        @media only screen and (min-device-width: 768px) {
+            background-color: $backgroundColorTransparentTablet;
+            overflow-x: hidden;
+            display: block;
+        }
+
+        @media only screen and (min-device-width: 1440px) {
+            display: block;
+        }
+
+        .all-content {
+            width: 100%;
+            margin: 0 auto;
+            max-width: 375px;
+
+            @media only screen and (max-device-width: 320px) {
+                padding: 0 10px;
+            }
+
+            @media only screen and (min-device-width: 768px) {
+                max-width: 768px;
+            }
+
+            @media only screen and (min-device-width: 1440px) {
+                max-width: 1440px;
+            }
+
+            .logo {
+                padding-top: 62px;
+                text-align: center;
+
+                @media only screen and (min-device-width: 768px) {
+                    padding-top: 50px;
+                    padding-left: 39px;
+                    text-align: left;
+                }
+
+                @media only screen and (min-device-width: 1440px) {
+                    padding-top: 102px;
+                    padding-left: 165px;
+                }
+            }
+
+            .container {
+                width: 100%;
+                max-width: 327px;
+                margin: 57px auto 0 auto;
+
+                @media only screen and (max-device-width: 320px) {
+                    margin-top: 35px;
+                }
+
+                @media only screen and (min-device-width: 768px) {
+                    max-width: 635px;
+                    margin: 152px 94px 0 39px;
+                    background-color: $colorDark;
+                }
+
+                @media only screen and (min-device-width: 1440px) {
+                    max-width: 723px;
+                    margin: 103px 552px 0 165px;
+                }
+
+                .heading {
+                    color: $colorGreen;
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    text-align: center;
+                    font-size: 26px;
+                    line-height: 38px;
+
+                    @media only screen and (min-device-width: 768px) {
+                        text-align: left;
+                        padding-top: 93px;
+                        font-size: 48px;
+                        line-height: 56px;
+                    }
+
+                    @media only screen and (min-device-width: 1440px) {
+                        padding-top: 88px;
+                        font-size: 52px;
+                        line-height: 62px;
+                    }
+
+                    .heading-2 {
+                        color: $colorWhite;
+                    }
+                }
+
+                .paragraph-text {
+                    color: $colorText;
+                    margin: 16px auto 0 auto;
+                    text-align: center;
+                    font-size: 15px;
+                    line-height: 25px;
+                    opacity: 0.7;
+
+                    @media only screen and (min-device-width: 768px) {
+                        margin: 31px 190px 0 0;
+                        text-align: left;
+                        font-size: 18px;
+                        line-height: 28px;
+                    }
+
+                    @media only screen and (min-device-width: 1440px) {
+                        margin: 24px 278px 0 0;
+                    }
+                }
+
+                .container-middle {
+                    max-width: 315px;
+                    width: 100%;
+                    margin: 0 auto;
+                    padding-top: 33px;
+                    display: flex;
+
+                    @media only screen and (max-device-width: 320px) {
+                        display: block;
+                    }
+
+                    @media only screen and (min-device-width: 768px) {
+                        display: none;
+                    }
+
+                    .left-images {
+                        display: inline-flex;
+
+                        @media only screen and (max-device-width: 320px) {
+                            width: 100%;
+                            text-align: center;
+                            display: block;
+                            padding-bottom: 10px;
+                        }
+
+                        .spotify {
+                            width: 56px;
+                            margin: 0;
+                            filter: invert(39%) sepia(38%) saturate(369%)
+                                hue-rotate(186deg) brightness(93%) contrast(90%)
+                                opacity(0.6);
+
+                            @media only screen and (max-device-width: 220px) {
+                                display: block;
+                                margin: 0 auto;
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        .apple-podcast {
+                            width: 45px;
+                            margin-left: 23px;
+                            filter: invert(39%) sepia(38%) saturate(369%)
+                                hue-rotate(186deg) brightness(93%) contrast(90%)
+                                opacity(0.6);
+
+                            @media only screen and (max-device-width: 220px) {
+                                display: block;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+
+                    .right-images {
+                        display: inline-flex;
+
+                        @media only screen and (max-device-width: 320px) {
+                            width: 100%;
+                            text-align: center;
+                            display: block;
+                        }
+
+                        .google-podcasts {
+                            width: 73px;
+                            height: 11px;
+                            margin-left: 25px;
+                            margin-top: 3px;
+                            filter: invert(39%) sepia(38%) saturate(369%)
+                                hue-rotate(186deg) brightness(93%) contrast(90%)
+                                opacity(0.6);
+
+                            @media only screen and (max-device-width: 220px) {
+                                display: block;
+                                margin: 0 auto;
+                                margin-bottom: 10px;
+                            }
+                        }
+
+                        .pocket-casts {
+                            width: 77px;
+                            height: 15px;
+                            margin-left: 16px;
+                            filter: invert(39%) sepia(38%) saturate(369%)
+                                hue-rotate(186deg) brightness(93%) contrast(90%)
+                                opacity(0.6);
+
+                            @media only screen and (max-device-width: 220px) {
+                                display: block;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                }
+
+                .container-buttons {
+                    width: 100%;
+                    justify-content: center;
+                    text-align: center;
+                    margin: 48px auto 30px auto;
+                    display: inline-block;
+
+                    @media only screen and (min-device-width: 768px) {
+                        text-align: left;
+                        margin: 40px 208px 0 0;
+                    }
+
+                    @media only screen and (min-device-width: 1440px) {
+                        margin: 40px 296px 0 0;
+                    }
+
+                    .input-email {
+                        background-color: $colorInput;
+                        color: $colorWhite;
+                        mix-blend-mode: normal;
+                        font-size: 14px;
+                        line-height: 28px;
+                        font-weight: bold;
+                        border-radius: 28px;
+                        border: 0;
+                        padding-left: 32px;
+                        max-width: 327px;
+                        width: 100%;
+                        height: 46px;
+                        margin: 0 auto;
+                        outline: none;
+
+                        @media only screen and (min-device-width: 768px) {
+                            max-width: 427px;
+                            height: 56px;
+                        }
+
+                        &::-webkit-input-placeholder {
+                            color: $colorWhite;
+                            opacity: 0.5;
+                        }
+                    }
+
+                    .button-access {
+                        background-color: $colorGreen;
+                        color: $colorDark;
+                        font-size: 14px;
+                        line-height: 28px;
+                        font-weight: bold;
+                        border-radius: 28px;
+                        border: 0;
+                        text-align: center;
+                        max-width: 326px;
+                        width: 100%;
+                        height: 46px;
+                        margin: 16px auto 0 auto;
+
+                        &:active,
+                        &:hover {
+                            cursor: pointer;
+                            background-color: $colorActiveGreen;
+                        }
+
+                        @media only screen and (min-device-width: 768px) {
+                            max-width: 162px;
+                            margin: -5px -5px -5px -170px;
+                        }
+                    }
+
+                    .mobile-button {
+                        margin: 40px auto 0 auto;
+
+                        @media only screen and (min-device-width: 768px) {
+                            margin: -5px -5px -5px -170px;
+                        }
+                    }
+
+                    .error-message-empty {
+                        font-size: 12px;
+                        font-weight: bold;
+                        line-height: 14px;
+                        color: $colorRed;
+                        height: 14px;
+                        padding-left: 32px;
+                        text-align: left;
+                        margin-bottom: -26px;
+                        display: none;
+                        position: relative;
+                        top: -90px;
+
+                        @media only screen and (min-device-width: 768px) {
+                            position: initial;
+                            top: initial;
+                        }
+                    }
+
+                    .error-message-not-formatted {
+                        font-size: 12px;
+                        font-weight: bold;
+                        line-height: 14px;
+                        color: $colorRed;
+                        height: 14px;
+                        padding-left: 32px;
+                        text-align: left;
+                        margin-bottom: -26px;
+                        display: none;
+                        position: relative;
+                        top: -90px;
+
+                        @media only screen and (min-device-width: 768px) {
+                            position: initial;
+                            top: initial;
+                        }
+                    }
+                }
+
+                .container-bottom {
+                    display: none;
+
+                    @media only screen and (min-device-width: 768px) {
+                        display: block;
+                        max-width: 536px;
+                        width: 100%;
+                        margin: 0;
+                        margin-top: 64px;
+                        display: flex;
+                        text-align: left;
+
+                        .spotify {
+                            width: 96px;
+                            display: inline-block;
+                            filter: invert(39%) sepia(38%) saturate(369%)
+                                hue-rotate(186deg) brightness(93%) contrast(90%)
+                                opacity(0.6);
+                        }
+
+                        .apple-podcast {
+                            width: 78px;
+                            padding-left: 40px;
+                            display: inline-block;
+                            filter: invert(39%) sepia(38%) saturate(369%)
+                                hue-rotate(186deg) brightness(93%) contrast(90%)
+                                opacity(0.6);
+                        }
+
+                        .google-podcasts {
+                            width: 125px;
+                            height: 18px;
+                            margin-top: 5px;
+                            padding-left: 41px;
+                            display: inline-block;
+                            filter: invert(39%) sepia(38%) saturate(369%)
+                                hue-rotate(186deg) brightness(93%) contrast(90%)
+                                opacity(0.6);
+                        }
+
+                        .pocket-casts {
+                            width: 129px;
+                            height: 26px;
+                            padding-left: 27px;
+                            filter: invert(39%) sepia(38%) saturate(369%)
+                                hue-rotate(186deg) brightness(93%) contrast(90%)
+                                opacity(0.6);
+                        }
+                    }
+                }
+            }
+        }
+
+        .image-bottom {
+            display: none;
+
+            @media only screen and (min-device-width: 768px) {
+                display: block;
+                width: 232px;
+                height: 104px;
+                padding-left: 30px;
+                margin-top: 140px;
+            }
+
+            @media only screen and (min-device-width: 1440px) {
+                width: 100%;
+                text-align: right;
+                margin-top: 0;
+
+                .pattern {
+                    top: -70px;
+                    position: relative;
+                }
+            }
+
+            .pattern {
+                width: 232px;
+                height: 104px;
+            }
+        }
+    }
+}
